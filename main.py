@@ -1,13 +1,9 @@
-import numpy as np
-import pandas as pd
+import pnadcibge
 import json
 import sys
 
-import pnadcibge
 
 if __name__ == "__main__":
-    FOLDER_PATH = "/home/lucasfelipe/Documents/PNADC_032019_20220916"
-    
     with open("./RV.json") as f:
         random_variables = json.load(f)
     
