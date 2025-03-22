@@ -29,7 +29,7 @@ def download_data(year: int, trimestre: int) -> dict:
         year = int(year)
         trimestre = int(trimestre)
     except ValueError:
-        return print("The value of year and trimestre must can be convertible into integer!")
+        raise ValueError("The value of year and trimestre must can be convertible into integer!")
 
     if not trimestre in [1, 2, 3, 4]:
         raise ValueError("The trimestre value must be 1, 2, 3 or 4")
@@ -65,7 +65,7 @@ def download_data(year: int, trimestre: int) -> dict:
 
 def extract_data(paths: dict) -> pd.DataFrame:
     if not isinstance(paths, dict):
-        raise TypeError("The paths arguument of extract_data must be a dict.")
+        raise TypeError("The paths argument must be a dict.")
     
     if platform.system() == "Windows":
         temp_dir = os.path.join(os.getenv("TEMP"), "dicionarios_extraidos")
@@ -145,6 +145,9 @@ def create_dataframe(dict_paths: dict, columns_intrested: list[str], sample_size
         sample: pd.DataFrame = chunk.sample(frac= sample_size, random_state = random_seed)
         dataframes_list.append(sample)
     
+    for p in dict_paths.values():
+        os.remove(p)
+        
     return pd.concat(dataframes_list, ignore_index=True)
     
 

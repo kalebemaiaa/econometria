@@ -1,14 +1,50 @@
 {
-    "VD4020": "Rendimento mensal efetivo de todos os trabalhos para pessoas de 14 anos ou mais de idade (apenas para pessoas que receberam em dinheiro, produtos ou mercadorias em qualquer trabalho)",
-    "VD4031": "Horas habitualmente trabalhadas por semana em todos os trabalhos para pessoas de 14 anos ou mais de idade",
-    "UF": "Unidade da Federação",
-    "V1022": "Situação do domicílio",
-    "V2007": "Sexo",
-    "V2009": "Idade do morador na data de referência",
-    "V2010": "Cor ou raça",
-    "V3009A": "Qual foi o curso mais elevado que ... frequentou anteriormente?",
-    "VD3005": "Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental - SISTEMA DE 9 ANOS",
-    "VD4001": "Condição em relação à força de trabalho na semana de referência para pessoas de 14 anos ou mais de idade",
-    "VD4002": "Condição de ocupação na semana de referência para pessoas de 14 anos ou mais de idade",
-    "V4012": "Nesse trabalho, ...era:"
+    "VD4020": {
+        "description": "Rendimento mensal efetivo de todos os trabalhos para pessoas de 14 anos ou mais de idade (apenas para pessoas que receberam em dinheiro, produtos ou mercadorias em qualquer trabalho)",
+        "col_name": "CON_REMUNERACAO_MENSAL"
+    },
+    "VD4031": {
+        "description": "Horas habitualmente trabalhadas por semana em todos os trabalhos para pessoas de 14 anos ou mais de idade",
+        "col_name": "CON_CARGA_HORARIA_SEMANAL"
+    },
+    "UF": {
+        "description": "Unidade da Federação",
+        "col_name": "NOM_UF"
+    },
+    "V1022": {
+        "description": "Situação do domicílio",
+        "col_name": "BIN_ZONA_DOMICILIO"
+    },
+    "V2007": {
+        "description": "Sexo",
+        "col_name": "BIN_SEXO"
+    },
+    "V2009": {
+        "description": "Idade do morador na data de referência",
+        "col_name": "CON_IDADE"
+    },
+    "V2010": {
+        "description": "Cor ou raça",
+        "col_name": "NOM_ETNIA"
+    },
+    "V3009A": {
+        "description": "Qual foi o curso mais elevado que ... frequentou anteriormente?",
+        "col_name": "ORD_NIVEL_FORMACAO"
+    },
+    "VD3005": {
+        "description": "Anos de estudo (pessoas de 5 anos ou mais de idade) padronizado para o Ensino fundamental - SISTEMA DE 9 ANOS",
+        "col_name": "ORD_TEMPO_ESTUDO"
+    },
+    "VD4001": {
+        "description": "Condição em relação à força de trabalho na semana de referência para pessoas de 14 anos ou mais de idade",
+        "col_name": "BIN_CONDICAO_FORCA_TRABALHO"
+    },
+    "VD4002": {
+        "description": "Condição de ocupação na semana de referência para pessoas de 14 anos ou mais de idade",
+        "col_name": "BIN_CONDICAO_OCUPACAO"
+    },
+    "V4012": {
+        "description": "Nesse trabalho, ...era:",
+        "col_name": "BIN_MODO_TRABALHO"
+    }
 }

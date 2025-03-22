@@ -5,3 +5,5 @@ venv/
 
 *.parquet
 __pycache__/
+
+*.csv

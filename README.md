@@ -25,19 +25,19 @@ pip install -r requirements.txt
 
 ## Usage
 
-Após instalado, o arquivo essêncial para ser utilizado é o [pnadcibge](./pnadcibge.py), ele possui algumas funções para baixar e extrair os arquivos PNAD do IBGE.
+Após instalado, o arquivo essêncial para ser utilizado é o [pnadcibge](pnadcibge.py), ele possui algumas funções para baixar e extrair os arquivos PNAD do IBGE.
 
-1. Comece fazendo o download dos dados de determinado ano/trimestre utilizando a função [download_data](./pnadcibge.py#24) que retorna um dicionario com os caminhos dos dados baixados:
+1. Comece fazendo o download dos dados de determinado ano/trimestre utilizando a função [download_data](pnadcibge.py#24) que retorna um dicionario com os caminhos dos dados baixados:
 ```python
 dict_paths = pnadcibge.download_data(year=2019, trimestre=3)
 ```
 
-2. De posse dos caminhos, utilize a função [extract_data](./pnadcibge.py#66) que também retorna um dicionáio, dessa vez indicando os arquivos extraídos:
+2. De posse dos caminhos, utilize a função [extract_data](pnadcibge.py#66) que também retorna um dicionáio, dessa vez indicando os arquivos extraídos:
 ```python
 dict_paths = pnadcibge.extract_data(paths = dict_paths)
 ```
 
-3. Utilizando os caminhos dos arquivos extraídos, finalmente é possível gerar o dataframe utilizando a função [create_dataframe](./pnadcibge.py#127):
+3. Utilizando os caminhos dos arquivos extraídos, finalmente é possível gerar o dataframe utilizando a função [create_dataframe](pnadcibge.py#127):
 ```python
 df = pnadcibge.create_dataframe(dict_paths, 
                                columns_intrested=None, 
