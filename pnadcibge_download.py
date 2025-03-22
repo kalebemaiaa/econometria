@@ -124,7 +124,7 @@ def parse_sas_file(sas_file: str, selected_columns: list[str]|None = None) -> tu
         print(selected_columns)
     return columns, encoding
 
-def create_dataframe(dict_paths: dict, columns_intrested: list[str], sample_size: float|None = None, random_seed: int|None = None) -> pd.DataFrame|None:
+def create_dataframe(dict_paths: dict, columns_intrested: list[str], sample_size: float|None = None, random_seed: int|None = None, clear_files: bool = True) -> pd.DataFrame|None:
     if (not sample_size is None) and (not isinstance(sample_size, float) or sample_size > 1 or sample_size < 0):
         raise TypeError("sample_size must be a float between 0 and 1. or None")
     
@@ -142,11 +142,15 @@ def create_dataframe(dict_paths: dict, columns_intrested: list[str], sample_size
     
     dataframes_list = list()
     for chunk in df_iter:
-        sample: pd.DataFrame = chunk.sample(frac= sample_size, random_state = random_seed)
-        dataframes_list.append(sample)
+        sample: pd.DataFrame = chunk.sample(frac= sample_size, random_state = random_seed) 
+        if sample_size is None:
+            dataframes_list.append(chunk)
+        else:
+            dataframes_list.append(sample)
     
-    for p in dict_paths.values():
-        os.remove(p)
+    if clear_files:
+        for p in dict_paths.values():
+            os.remove(p)
         
     return pd.concat(dataframes_list, ignore_index=True)
     

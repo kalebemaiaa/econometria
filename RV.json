@@ -45,6 +45,6 @@
     },
     "V4012": {
         "description": "Nesse trabalho, ...era:",
-        "col_name": "BIN_MODO_TRABALHO"
+        "col_name": "NOM_MODO_TRABALHO"
     }
 }
