@@ -46,5 +46,9 @@
     "V4012": {
         "description": "Nesse trabalho, ...era:",
         "col_name": "NOM_MODO_TRABALHO"
+    },
+    "V4009": {
+        "description": "Quantos trabalhos...tinha na semana de ... a ... (semana de referência?",
+        "col_name": "ORD_QTD_EMPREGOS"
     }
 }
